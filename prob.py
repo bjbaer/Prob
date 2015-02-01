@@ -12,12 +12,15 @@ for k,v in count.iteritems():
 	print "The frequency of number " + str(k) + " is " + str(float(v) / count_sum)
 
 plt.boxplot(data) #create a box plot of the data
+plt.title('Sample boxplot')
 plt.savefig("boxplot.png") #save the graph
 
 plt.figure()#resets the graph, without this it overlaid the histogram ontop of the boxplot
 plt.hist(data, histtype = 'bar') #create a histogram of the data
+plt.title('Sample histogram')
 plt.savefig("histogram.png") #save the histogram
 
 plt.figure() #setup the figure
 graph1 = stats.probplot(data, dist = "norm", plot=plt) #create the QQ graph, checking it against normal distribution
+plt.title('Sample QQ plot')
 plt.savefig("QQplot.png") #save the QQ plot
